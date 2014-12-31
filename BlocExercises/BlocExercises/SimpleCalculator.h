@@ -1,7 +1,7 @@
 //
 //  SimpleCalculator.h
 //  BlocExercises
-//  manhong
+//  manhong lee
 //  Created by Aaron on 6/9/14.
 //
 //
