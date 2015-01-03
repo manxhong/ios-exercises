@@ -12,6 +12,24 @@
 
 - (NSString *) itemMaryCanPurchaseForDollars:(NSInteger)dollars {
     NSString *itemToReturn;
+    if (dollars >= 5) {
+        if (dollars == 5) {
+            itemToReturn = @"have some gum";
+        }
+        if (dollars == 6) {
+            itemToReturn = @"have an apple";
+        }
+        if (dollars == 1000) {
+            itemToReturn = @"have an Apple computer";
+        }
+        if (dollars == 1000000000) {
+            itemToReturn = @"have The Big Apple";
+        }
+    }
+
+else {
+        itemToReturn = @"get out of my store";
+    }
 
     /* WORK HERE */
     
@@ -24,11 +42,10 @@
 
     NSUInteger cost = 24;
     
-    if (self.getsDiscount) {
-        cost *= .75;
-    }
+    NSInteger message= (self.getsDiscount) ? cost *= .75 : cost;
     
-    return cost;
+    
+    return message;
 }
 
 @end
