@@ -11,25 +11,25 @@
 @implementation EqualityDeterminer
 
 - (BOOL) string:(NSString *)string1 isTheSameAsString:(NSString *)string2 {
-    BOOL areTheyEqual = [string1 isEqual: string2];
-    NSLog(@"Are they Equal? %@", areTheyEqual ? @"Yes" : @"No");
+//    BOOL areTheyEqual = [string1 isEqual: string2];
+//    NSLog(@"Are they Equal? %@", areTheyEqual ? @"Yes" : @"No");
     /* WORK HERE */
-    return areTheyEqual;
+    return [string1 isEqual: string2];
 }
 
 - (BOOL) number:(NSNumber *)number1 isTheSameAsNumber:(NSNumber *)number2 {
-    BOOL areTheyEqual = [number1 isEqual:number2];
-    NSLog(@"%@", areTheyEqual ? @"Yes" : @"No");
+//    BOOL areTheyEqual = [number1 isEqual:number2];
+//    NSLog(@"%@", areTheyEqual ? @"Yes" : @"No");
     /* WORK HERE */
-    return areTheyEqual;
+    return [number1 isEqual:number2];
 }
 
 - (BOOL) integer:(NSInteger)integer1 isGreaterThan:(NSInteger)integer2 {
-    BOOL Greaterthan = integer1 > integer2;
-    NSLog(@"%@", Greaterthan ? @"YES" : @"NO");
+//    BOOL Greaterthan = integer1 > integer2;
+//    NSLog(@"%@", Greaterthan ? @"YES" : @"NO");
     
     /* WORK HERE */
-    return Greaterthan;
+    return integer1 > integer2;
 }
 
 @end

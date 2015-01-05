@@ -18,6 +18,9 @@
 
 - (NSString *) cheeseNameWithoutCheeseSuffix:(NSString *)cheeseName {
     NSRange withoutcheeseword = [cheeseName rangeOfString:@" cheese" options:NSCaseInsensitiveSearch];
+    if (withoutcheeseword.location == NSNotFound) {
+        return cheeseName;
+    }
     NSString* newSen = [cheeseName stringByReplacingCharactersInRange:withoutcheeseword withString:@""];
     NSLog(@"%@", newSen);
     /* WORK HERE */
@@ -25,11 +28,14 @@
 }
 
 - (NSString *) numberOfCheesesStringWithCheeseCount:(NSUInteger)cheeseCount {
+    
+    NSString * word;
+    
     if (cheeseCount == 1) {
-        NSString *cheese = [NSString stringWithFormat:@"%lx CHEESE", cheeseCount];
+        word= [NSString stringWithFormat:@"%li cheese", cheeseCount];
         /* WORK HERE, ASSUMING THERE IS 1 CHEESE */
     } else {
-        NSString * cheeses= [NSString stringWithFormat:@"%lx CHEESES", cheeseCount];
+        word= [NSString stringWithFormat:@"%li cheeses", cheeseCount];
         /* WORK HERE, ASSUMING THERE ARE 2+ CHEESES */
     }
     
@@ -37,7 +43,7 @@
      (You will learn more about if/else statements in the next checkpoint.)
      */
     
-    return 0;
+    return word;
 }
 
 @end
