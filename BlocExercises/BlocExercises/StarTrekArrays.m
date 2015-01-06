@@ -11,23 +11,39 @@
 @implementation StarTrekArrays
 
 - (NSArray *) arrayOfStarTrekCharactersFromString:(NSString *)characterString {
+    NSArray *characters = [characterString componentsSeparatedByString:@";"];
     /* WORK HERE */
-    return @[];
+    return characters;
 }
 
 - (NSString *) stringOfStarTrekCharactersFromArray:(NSArray *)characterArray {
+    NSString *allcharacters =[characterArray componentsJoinedByString:@";"];
     /* WORK HERE */
-    return @"";
+    return allcharacters;
 }
 
 - (NSArray *) alphabeticallySortedStarTrekCharactersFromArray:(NSArray *)characterArray {
+    NSMutableArray *newArray = [[NSMutableArray alloc] initWithArray:characterArray];
+    NSSortDescriptor *sortalphabetically =[[NSSortDescriptor alloc] initWithKey:nil ascending:YES selector:@selector(localizedCaseInsensitiveCompare:)];
     /* WORK HERE */
-    return @[];
+    [newArray sortUsingDescriptors:@[sortalphabetically]];
+    return newArray;
 }
 
 - (BOOL) characterArrayContainsWorf:(NSArray *)characterArray {
-    /* WORK HERE */
-    return NO;
+    
+    NSPredicate *containsWorf = [NSPredicate predicateWithFormat:@"SELF CONTAINS[c] 'worf'"];
+    [characterArray filteredArrayUsingPredicate:containsWorf];
+    NSLog(@"%@",characterArray);
+    NSLog(@"%ld",characterArray.count);
+    //does the predicate changes the array or what?
+    if ([characterArray filteredArrayUsingPredicate:containsWorf].count !=0){
+        return YES;
+    }
+    else {
+        return NO;
+        
+    }
 }
 
 @end

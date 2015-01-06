@@ -32,10 +32,10 @@
     NSString * word;
     
     if (cheeseCount == 1) {
-        word= [NSString stringWithFormat:@"%li cheese", cheeseCount];
+        word= [NSString stringWithFormat:@"%ld cheese", cheeseCount];
         /* WORK HERE, ASSUMING THERE IS 1 CHEESE */
     } else {
-        word= [NSString stringWithFormat:@"%li cheeses", cheeseCount];
+        word= [NSString stringWithFormat:@"%ld cheeses", cheeseCount];
         /* WORK HERE, ASSUMING THERE ARE 2+ CHEESES */
     }
     
