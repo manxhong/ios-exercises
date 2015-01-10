@@ -23,7 +23,7 @@
 - (NSDictionary *)dictionaryWithQuoteAddedToStarTrekCharacterDictionary:(NSDictionary *)characterDictionary {
     /* WORK HERE */
     NSMutableDictionary *newdic =[characterDictionary mutableCopy];
-    [newdic setObject:@"you only live once" forKey:@"quote"];
+    [newdic setObject:@"stay strong" forKey:@"quote"];
     return newdic;
 }
 

@@ -34,8 +34,8 @@
     
     NSPredicate *containsWorf = [NSPredicate predicateWithFormat:@"SELF CONTAINS[c] 'worf'"];
     [characterArray filteredArrayUsingPredicate:containsWorf];
-    NSLog(@"%@",characterArray);
-    NSLog(@"%ld",characterArray.count);
+    //NSLog(@"%@",characterArray);
+    //NSLog(@"%ld",characterArray.count);
     //does the predicate changes the array or what?
     if ([characterArray filteredArrayUsingPredicate:containsWorf].count !=0){
         return YES;
